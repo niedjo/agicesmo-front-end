@@ -1,0 +1,307 @@
+/* les screens */
+
+/* welcome.jsx */ 
+
+body{
+  background: url("./assets/analysis-2030265__340.jpg") center/cover ;
+  background-color: #c4dbff;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 101vh;
+}
+.content{
+  animation: come 1.5s ease-out;
+  margin-top: 30px;
+}
+.welcome{
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 30px;
+  color: blue;
+}
+.loadmagic{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 10px solid rgb(93, 93, 241);
+  border-left-color: rgb(70, 236, 70);
+  border-right-color: rgb(236, 236, 76);
+  border-bottom-color: rgb(255, 1, 1);
+  animation: animecool 1.8s linear infinite;
+}
+
+@keyframes animecool {
+  0%{
+      transform: rotate(0deg);
+      border-left-color: rgb(236, 70, 214);
+      border-right-color: rgb(236, 81, 76);
+      border-bottom-color: rgb(1, 255, 1);
+  }
+
+  100%{
+      transform: rotate(360deg);
+      border: 10px solid rgb(93, 93, 241);
+  }
+}
+
+
+@keyframes come {
+  0%{
+      opacity: 0;
+      margin-top: 500px;
+  }
+  25%{
+      opacity: 0.1;
+  }
+  50%{
+      opacity: 0.2;
+  }
+  75%{
+      opacity: 0.4;
+  }
+  100%{
+      opacity: 1;
+      margin-top: 30px; 
+  }
+}
+
+.ii6{
+  background: url('./assets/test2/logo de DARREN.png');
+  background-position: center;
+  background-size: cover;
+  width: 130px;
+  height: 130px;
+  border: none;
+  border-radius: 10pc;
+  margin: 10px;
+}
+
+.compte{
+  margin: auto;
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 5%;
+}
+
+.a{
+  text-decoration: none;
+  color: white;
+  font-size: 17px;
+  border: 0px solid white;
+  background-color: blue;
+  padding: 15px;
+  padding-left: 25px;
+  padding-right: 25px;
+  border-radius: 2pc;
+  transition: scale .2s ease-out;
+}
+
+.a:hover{
+  scale: 1.2;
+}
+
+.a:active{
+  color: blue;
+  background-color: white; 
+}
+
+/* login.jsx */
+
+.login{
+  background-color: #c5dbff;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 200vh;
+}
+
+.LoginButton{
+  padding: 8px;
+  margin: 10px;
+  width: 60%;
+  border-radius: 3pc;
+  background-color: #0d6efd;
+  border: none;
+  color: #fff;
+  transition: scale .2s ease-out;
+  font-size: 18px;
+}
+
+.LoginButton:hover{
+  scale: 1.19;
+}
+
+label{
+  font-size: 18px;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+/* signup.jsx */
+
+.hello{
+  padding: 15px;
+  color: #fff;
+  background: #0d6efd;
+  border-radius: 3pc;
+}
+
+/* PagePrincipale.jsx */
+
+.pagePrincipale{
+  background: url("./assets/image.jpg") center / cover;
+  width: 100%;
+  height: 210vh;
+  background-repeat: no-repeat;
+}
+
+.icone_l{
+  width: 30px;
+  height: 30px;
+  margin-right: 18px;
+}
+
+.icone_f{
+  width: 26px;
+  height: 26px;
+  margin-left: 18px;
+  border-radius: 1pc;
+}
+
+.box{
+  height: 520px;
+  background: #61a0ff;
+  /* opacity: .78; */
+  border-radius: 3pc;
+  
+  /* pour arranger le box */
+
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-around; */
+  align-items: center;
+  text-align: center;
+  margin: 3%;
+  /* margin-top: -1px; */
+
+}
+
+.libelle{
+  font-size: 21px;
+  color: bisque;
+  font-weight: 500;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-left: 10px;
+  margin-top: 15px;
+  display: flex;
+}
+
+.box button, .box .facturer, .box .operation, .box .requetes{
+  border: 1px solid #61a0ff;
+  border-radius: 15px;
+  background: whitesmoke;
+  color: #083b88;
+  width: 210px;
+  text-align: center;
+  text-decoration: none;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  padding: 6px;
+  position: relative;
+}
+
+.box button:active{
+  background: #083b88;
+  color: azure;
+}
+
+.facturer, .operation, .requetes{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.i1{
+  background: url("./assets/images.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.i2{
+  background: url("./assets/stocks.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.i3{
+  background: url("./assets/search.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.i4{
+  background: url("./assets/caisse.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.i5{
+  background: url("./assets/parametre.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.i6{
+  background: url('./assets/test2/logo de DARREN.png');
+  background-position: center;
+  background-size: cover;
+  width: 80px;
+  height: 80px;
+  border: none;
+  border-radius: 10pc;
+  margin: 10px;
+}
+.i7{
+  background: url("./assets/test2/logoDall-E4.jpg");
+  background-position: center;
+  background-size: cover;
+  width: 55px;
+  height: 55px;
+  border: none;
+  border-radius: 50%;
+}
+i{
+  width: 35px;
+  height: 35px;
+  margin-right: 25px;
+  padding-left: 20px;
+}
+
+
+
+span{
+  background: url("./assets/fleche.jpg");
+  background-position: center;
+  background-size: cover;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-left: 25px;
+  padding-left: 20px;
+}
+.r{
+  cursor: pointer;
+}
+.rotate{
+  transform: rotate(90deg);
+  cursor: pointer;
+}
+
+
+/* les components */
+
+.flex-admin {
+  justify-content: center;
+  padding-top: 5%;
+}

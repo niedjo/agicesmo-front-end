@@ -1,0 +1,20 @@
+.called{
+    border-radius: 8px;
+    background-color: #adc5e9;
+    color: white;
+    padding-right: 15px;
+    padding: 5px;
+    width: 120px;
+    border-width: 0px;
+    cursor: auto;
+}
+.not-colled{
+    border-radius: 8px;
+    background-color: red;
+    color: white;
+    padding-right: 15px;
+    padding: 5px;
+    width: 120px;
+    border-width: 0px;
+    cursor: auto;
+}

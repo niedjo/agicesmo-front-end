@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 218a2fb6457cd8bfe7b6c1b338cfc4bb-96090f22-2f75-43fa-9a76-ff82331fe57b => ma cle d'API
+        // v1 = ""
+        
+        // function Messages () {
+        //     var myHeaders = new Headers();
+        //     myHeaders.append("Authorization", "App 218a2fb6457cd8bfe7b6c1b338cfc4bb-96090f22-2f75-43fa-9a76-ff82331fe57b");
+        //     myHeaders.append("Content-Type", "application/json");
+        //     myHeaders.append("Accept", "application/json");
+
+        //     var raw = JSON.stringify({
+        //         "messages": [
+        //             {
+        //                 "destinations": [{"to":"237655059273"}],
+        //                 "from": "nkds",
+        //                 "text": "hi darren ca fait un bay !"
+        //             }
+        //         ]
+        //     });
+
+        //     var requestOptions = {
+        //         method: 'POST',
+        //         headers: myHeaders,
+        //         body: raw,
+        //         redirect: 'follow'
+        //     };
+
+        //     fetch("https://n82dny.api.infobip.com/sms/2/text/advanced", requestOptions)
+        //         .then(response => {
+        //             response.text()
+        //             console.log(response.status);
+        //         })
+        //         .then(result => 
+        //          {
+        //             console.log(result); 
+        //         })
+        //         .catch(error => console.log('error', error));
+        // }
+        function Messages () {
+            var myHeaders = new Headers();
+            myHeaders.append("Authorization", "App 218a2fb6457cd8bfe7b6c1b338cfc4bb-9 6090f22-2f75-43fa-9a76-ff82331fe57b");
+            myHeaders.append("Content-Type", "application/json");
+            myHeaders.append("Accept", "application/json");
+
+            var raw = JSON.stringify({
+                "messages": [
+                    {
+                        "destinations": [{"to":"237655059273"}],
+                        "from": "nkds",
+                        "text": "yo daa c'est comment ?"
+                    }
+                ]
+            });
+
+            var requestOptions = {
+                method: 'POST',
+                headers: myHeaders,
+                body: raw,
+                redirect: 'follow'
+            };
+
+            fetch("https://n82dny.api.infobip.com/sms/2/text/advanced", requestOptions)
+                .then(response => {
+                    console.log(response.status);
+                    console.log(response.ok);
+                    if (response.ok) {
+                        return response.text()
+                    }
+                    else {
+                        console.log("poom poom");
+                        //on pense au can remember internally
+                    }
+                })
+                .then(result => 
+                 {
+                    console.log(result); 
+                    if (result.includes("Message sent to next instance")) {
+                        console.log("Le message a été envoyé avec succès !");
+                        alert("poom") //on pense au can remember internally
+                    } else if (result.includes("Error: Invalid destination number")) {
+                        console.log("Erreur : Numéro de destination invalide");
+                    } else if (result.includes("BAD_REQUEST")) {
+                        console.log("Erreur : Numéro de destination invalide x 2");
+                    } else if (result.includes("UNAUTHORIZED")) {
+                        console.log("Vous ne pouvez plus envoyer des messages, veillez renouveler votre compte de messagerie ou contacter horizon pour plus d'informations");
+                    } else {
+                        console.log("Réponse non gérée :", result);
+                    }
+                })
+                .catch(error => console.log('error', error));
+        }
+
+        function Messages1() {
+            var myHeaders = new Headers();
+            myHeaders.append("Authorization", "App 218a2fb6457cd8bfe7b6c1b338cfc4bb-96090f22-2f75-43fa-9a76-ff82331fe57b");
+            myHeaders.append("Content-Type", "application/json");
+            myHeaders.append("Accept", "application/json");
+
+            var raw = JSON.stringify({
+                "messages": [
+                    {
+                        "destinations": [{"to":"237655059273"}],
+                        "from": "nkds",
+                        "text": "hi darren ca fait un bay !"
+                    }
+                ]
+            });
+
+            var requestOptions = {
+                method: 'POST',
+                headers: myHeaders,
+                body: raw,
+                redirect: 'follow'
+            };
+
+            fetch("https://n82dny.api.infobip.com/sms/2/text/advanced", requestOptions)
+                .then(response => {
+                    console.log("Response Status:", response.status);
+
+                    if (response.ok) {
+                        // La requête a réussi (statut 200 OK)
+                        return response.text();
+                    } else {
+                        // La requête a échoué
+                        throw new Error(`Erreur HTTP! Statut: ${response.status}`);
+                    }
+                })
+                .then(result => {
+                    // Traitez le résultat de la réponse
+                    console.log(result);
+
+                    // Gérez différents cas de réponse
+                    if (result.includes("Message sent successfully")) {
+                        console.log("Le message a été envoyé avec succès !");
+                    } else if (result.includes("Error: Invalid destination number")) {
+                        console.log("Erreur : Numéro de destination invalide");
+                    } else {
+                        console.log("Réponse non gérée :", result);
+                    }
+                })
+                .catch(error => console.log('error', error));
+        }
+
+
+        Messages()
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
+
+<!-- 
+
+    @echo off
+
+    start cmd /k "echo Commande 1 && pause"
+    start cmd /k "echo Commande 2 && pause"
+    start cmd /k "echo Commande 3 && pause"
+
+    200
+
+    {
+    "bulkId": "2034072219640523072",
+    "messages": [
+        {
+        "messageId": "2250be2d4219-3af1-78856-aabe-1362af1edfd2",
+        "status": {
+            "description": "Message sent to next instance",
+            "groupId": 1,
+            "groupName": "PENDING",
+            "id": 26,
+            "name": "MESSAGE_ACCEPTED"
+        },
+        "to": "41793026727"
+        }
+    ]
+    }
+
+    401
+
+    {
+    "requestError": {
+        "serviceException": {
+        "messageId": "UNAUTHORIZED",
+        "text": "Unauthorized"
+        }
+    }
+
+    500
+
+    {
+    "requestError": {
+    "serviceException": {
+        "messageId": "UNAUTHORIZED",
+        "text": "Unauthorized"
+    }
+    }
+}
+}
+}
+
+ -->

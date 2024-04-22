@@ -1,0 +1,11 @@
+.Requettes{
+    background-color: aliceblue;
+    background-image: none;
+    height: 180vh;
+    width: 100%;
+    z-index: 0;
+}
+
+.trr :nth-child(1){
+    font-weight: 800;
+}

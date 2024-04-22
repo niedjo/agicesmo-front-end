@@ -1,0 +1,39 @@
+.contenus{
+    background-color: aliceblue;
+    height: 90vh;
+    width: 100%;
+    /* padding-top: 30px; */
+    border-radius: 10px;
+    /* margin-top: 10px; */
+}
+
+.navTab{
+    background: #7ba2db;
+    padding: 15px;
+}
+
+.tab{
+    padding: 10px;
+    margin: 15px;
+    background: #0567fa;
+    color: white;
+    border: 2px solid #0567fa;
+    border-radius: 2pc;
+    cursor: pointer;
+}
+
+.tabActive{
+    padding: 10px;
+    margin: 15px;
+    background: white;
+    color: #0567fa;
+    border: 2px solid #0567fa;
+    border-radius: 2pc;
+    cursor: pointer;
+}
+
+.contenu{
+    margin-top: 60px;
+    height: 69vh;
+    /* overflow: auto; */
+}

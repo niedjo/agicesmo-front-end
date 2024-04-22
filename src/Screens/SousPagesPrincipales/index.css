@@ -1,0 +1,22 @@
+.form-group1{
+    padding: 20px;
+    border-radius: 3pc;
+    background: #86b4f8;
+    /* height: 100vh; */
+}
+
+td{
+    padding: 10px;
+}
+
+/* .selectsupertd1 {
+    display: none;
+} */
+
+li { 
+    border-radius: 0;
+    margin: 0;
+    padding-left: 10px;
+    padding-top: 5px;
+    font-size: 12px;
+}

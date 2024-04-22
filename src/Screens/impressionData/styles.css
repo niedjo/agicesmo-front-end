@@ -1,0 +1,26 @@
+.body{
+  margin-left: 10%;
+}
+
+.flex{
+  display: flex;
+}
+
+.super-end{
+  margin-left: 5%;
+}
+
+.answer{
+  font-weight: 600;
+  margin-left: 5px;
+}
+.answer1{
+  margin-left: 5px;
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+}
+
+.td{
+  padding: 0%;
+}

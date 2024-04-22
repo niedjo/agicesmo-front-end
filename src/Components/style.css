@@ -1,0 +1,87 @@
+.header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo-name {
+    width: 350px;
+    height: 50px;
+    background-color: #1717fd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: 500;
+}
+
+.spn {
+    background: url("../assets/test2/logoDall-E2.jpg") center / cover ;
+    background-repeat: no-repeat;
+    padding: 8%;
+    margin: 5px;
+    z-index: 0;
+    width: 40px;
+    height: 40px;
+}
+
+.desc-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.desc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #0303ac;
+    width: 400px;
+    color: white;
+}
+
+.desc1 {
+    color: white;
+}
+.desc2 {
+    background: #9a9ab3;
+    color: blue;
+}
+.desc3 {
+    background: #9de6f3;
+    color: blue;
+}
+
+/* le second header */
+
+.header2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.desc1-header2{
+    width: 45%;
+    margin: 10;
+    text-align: center;
+    font-style: italic;
+    color: red;
+}
+.desc2-header2{
+    width: 45%;
+    margin: 10;
+    text-align: center;
+}
+
+.header3{
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    color: #444;
+    background: #cecef3;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
